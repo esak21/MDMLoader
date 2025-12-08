@@ -1,6 +1,6 @@
 import aws_cdk as cdk
-from src.lib.edm_stage import EDMAppStage
-from src.lib.utils import read_configs
+from src.infra.edm_stage import EDMAppStage
+from src.infra.utils import read_configs
 import os
 
 app = cdk.App()
