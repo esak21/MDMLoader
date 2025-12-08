@@ -1,0 +1,9 @@
+env_name: "DEV"
+existing_vpc_id : "vpcid"
+api_instance_type : "t2.micro"
+log_level : "INFO"
+bucket_name: "cogesak-dev-east-1-bucket-12345"
+enable_versioning: true
+instance_type: "t3.micro"
+instance_count: 2
+ami_id : "ami-0af4e36e3fb410126"

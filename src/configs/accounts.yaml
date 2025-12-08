@@ -1,0 +1,9 @@
+dev:
+  account: "905418448077"
+  region: "us-east-1"
+qa:
+  account: "905418448077"
+  region: "us-east-1"
+prod:
+  account: "905418448077"
+  region: "us-east-1"
