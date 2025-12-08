@@ -46,7 +46,7 @@ WORKDIR /app
 COPY --from=builder /app/.venv /app/.venv
 
 # Copy the application source code
-COPY data/ ./data/
+COPY src/data/ ./data/
 
 # Copy the application source code
 COPY src/ ./src/

@@ -1,0 +1,11 @@
+env_name: "PRD"
+existing_vpc_id : "vpcid"
+api_instance_type : "t2.micro"
+log_level : "INFO"
+bucket_name: "prod-bucket-12345"
+enable_versioning: true
+
+
+
+
+
