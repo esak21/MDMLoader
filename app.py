@@ -1,5 +1,5 @@
 import aws_cdk as cdk
-from src.infra.edm_stage import EDMAppStage
+from src.AppStack import AppStack
 from src.infra.utils import read_configs
 import os
 
@@ -12,9 +12,9 @@ print(env)
 account_id = accounts_info.get(env).get("account")
 region = accounts_info.get(env).get("region")
 
-EDMAppStage(app, 'EDM-QA',
-           env=cdk.Environment(account='905418448077', region='us-east-1'),
-           )
+target_env = cdk.Environment(account=account_id, region=region)
+
+AppStack(app, "EDM-QA", env = target_env)
 
 app.synth()
 

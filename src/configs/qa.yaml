@@ -1,4 +1,4 @@
-env_name: "DEV"
+env_name: "QA"
 existing_vpc_id : "vpcid"
 api_instance_type : "t2.micro"
 log_level : "INFO"
@@ -7,3 +7,27 @@ enable_versioning: true
 instance_type: "t3.micro"
 instance_count: 2
 ami_id : "ami-0af4e36e3fb410126"
+topic_name: "EDM-APP-SNS-Topic"
+email: "esakki2021@gmail.com"
+SNS:
+  topic_name: "EDM-APP-SNS-Topic"
+  email: "esakki2021@gmail.com"
+S3:
+  bucket_name: "cogesak-dev-east-1-bucket-12345"
+BATCH:
+  platform : "FARGATE"
+  job_queue_name:  "EDM-OLAP-QUEUE"
+  priority: 1
+  enabled: True
+  compute_environment_order:
+    compute_environment: "EDM-APP-COMPUTE"
+    order: 1
+  existing_batch_tasks_role_arn : "arn:aws:iam::905418448077:role/MyBatchJoBRoles"
+  existing_batch_tasks_execution_role_arn : "arn:aws:iam::905418448077:role/BatchEcsTaskExecutionRole"
+
+LAMBDA:
+  function_name: "EDM_APP_LAMBDA"
+  runtime: "python3.11"
+  code: "src"
+  handler: "infraRunner.lambda_handler"
+  role_arn: "arn:aws:iam::905418448077:role/EsakkiLambdaRootRoles"
